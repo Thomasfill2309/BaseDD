@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="envios.html">Envíos</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="favoritos.html">Favoritos</a>
+    </nav>
+
+    <section>
+        <h2>Tu Carrito de Compras</h2>
+        <p>Has añadido los siguientes productos a tu carrito. Si estás listo para completar tu compra, continúa al siguiente paso.</p>
+
+        <div class="carrito">
+            <!-- Producto 1 -->
+            <div class="producto-carrito">
+                <img src="img/teclado.jpg" alt="Teclado Mecánico RGB" width="100">
+                <div class="info-producto">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p><strong>Precio:</strong> $1,200 MXN</p>
+                    <p><strong>Cantidad:</strong> 1</p>
+                    <p><strong>Subtotal:</strong> $1,200 MXN</p>
+                </div>
+                <button class="eliminar-producto">Eliminar</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto-carrito">
+                <img src="img/mouse.jpg" alt="Mouse Gamer 16000 DPI" width="100">
+                <div class="info-producto">
+                    <h3>Mouse Gamer 16000 DPI</h3>
+                    <p><strong>Precio:</strong> $800 MXN</p>
+                    <p><strong>Cantidad:</strong> 1</p>
+                    <p><strong>Subtotal:</strong> $800 MXN</p>
+                </div>
+                <button class="eliminar-producto">Eliminar</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto-carrito">
+                <img src="img/auriculares.jpg" alt="Auriculares" width="100">
+                <div class="info-producto">
+                    <h3>Auriculares con Sonido Envolvente</h3>
+                    <p><strong>Precio:</strong> $1,500 MXN</p>
+                    <p><strong>Cantidad:</strong> 1</p>
+                    <p><strong>Subtotal:</strong> $1,500 MXN</p>
+                </div>
+                <button class="eliminar-producto">Eliminar</button>
+            </div>
+        </div>
+
+        <div class="total-carrito">
+            <h3>Total</h3>
+            <p><strong>Subtotal:</strong> $3,590 MXN</p>
+            <p><strong>Envío:</strong> $90 MXN (Envío estándar)</p>
+            <p><strong>Total a Pagar:</strong> $3,590 MXN</p>
+        </div>
+
+        <div class="acciones-carrito">
+            <button class="seguir-comprando">Seguir Comprando</button>
+            <button class="procesar-pago">Proceder a Pago</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Periféricos Tech | Todos los derechos reservados</p>
+    </footer>
+    <script src="js/scp.js"></script>
+</body>
+</html>

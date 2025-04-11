@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos a Domicilio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Envíos a Domicilio</h1>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tu Carrito</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <button id="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <input type="text" id="product-name" placeholder="Nombre" required>
+                    <textarea id="product-description" placeholder="Descripción" required></textarea>
+                    <input type="number" id="product-price" placeholder="Precio" step="0.01" required>
+                    <input type="text" id="product-image" placeholder="URL de la imagen">
+                    <input type="number" id="product-stock" placeholder="Stock" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="envios.html">Envíos</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="favoritos.html">Favoritos</a>
+    </nav>
+    <section>
+        <h2>Opciones de Envío</h2>
+        <p>En Periféricos Tech nos aseguramos de que tus productos lleguen a la puerta de tu casa de forma rápida y segura. Ofrecemos diversas opciones de envío según tus necesidades.</p>
+        
+        <div class="envio">
+            <h3>Envío Estándar</h3>
+            <p>El envío estándar es nuestra opción más económica. Este servicio se realiza en un plazo de 5 a 7 días hábiles, dependiendo de la ubicación de entrega.</p>
+            <ul>
+                <li><strong>Precio:</strong> $5 USD</li>
+                <li><strong>Plazo de entrega:</strong> 5 a 7 días hábiles</li>
+                <li><strong>Disponible en:</strong> Todos los destinos nacionales</li>
+            </ul>
+        </div>
+
+        <div class="envio">
+            <h3>Envío Expreso</h3>
+            <p>Si necesitas tu producto de manera urgente, el envío expreso es la opción ideal. Este servicio garantiza la entrega en 2 a 3 días hábiles.</p>
+            <ul>
+                <li><strong>Precio:</strong> $15 USD</li>
+                <li><strong>Plazo de entrega:</strong> 2 a 3 días hábiles</li>
+                <li><strong>Disponible en:</strong> Principales ciudades del país</li>
+            </ul>
+        </div>
+
+        <div class="envio">
+            <h3>Envío Gratuito</h3>
+            <p>Si realizas una compra superior a $100 USD, te ofrecemos el envío gratuito. ¡Así de fácil!</p>
+            <ul>
+                <li><strong>Precio:</strong> Gratis</li>
+                <li><strong>Plazo de entrega:</strong> 7 a 10 días hábiles</li>
+                <li><strong>Disponible en:</strong> Todos los destinos nacionales</li>
+            </ul>
+        </div>
+
+        <div class="envio">
+            <h3>Envío Internacional</h3>
+            <p>Si te encuentras fuera del país, no te preocupes. Ofrecemos envíos internacionales a una gran cantidad de países. Los plazos de entrega y costos varían según la ubicación.</p>
+            <ul>
+                <li><strong>Precio:</strong> Variable según destino</li>
+                <li><strong>Plazo de entrega:</strong> 7 a 15 días hábiles</li>
+                <li><strong>Disponible en:</strong> América Latina, Estados Unidos, Europa, Asia y más</li>
+            </ul>
+        </div>
+
+        <h3>¿Cómo Realizar un Pedido?</h3>
+        <p>Realizar un pedido en Periféricos Tech es muy fácil. Solo sigue estos pasos:</p>
+        <ol>
+            <li>Selecciona los productos que deseas comprar en nuestra tienda.</li>
+            <li>Agrega los productos a tu carrito de compra.</li>
+            <li>Ve al carrito y selecciona la opción de envío que prefieras.</li>
+            <li>Proporciona tus datos de envío y realiza el pago.</li>
+            <li>¡Recibe tu pedido en la dirección que has proporcionado!</li>
+        </ol>
+
+        <h3>Formulario de Envío</h3>
+        <p>Por favor, completa la siguiente información para recibir el envío en tu dirección.</p>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="direccion">Dirección de envío:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+            
+            <label for="codigo_postal">Código Postal:</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefono">Número de teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            
+            <input type="submit" value="Realizar Pedido">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Periféricos Tech | Todos los derechos reservados</p>
+    </footer>
+    <script src="js/scp.js"></script>
+</body>
+</html>

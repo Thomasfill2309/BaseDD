@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Periféricos Tech</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sobre Nosotros</h1>
+        <p>Innovando en tecnología para mejorar tu experiencia</p>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tu Carrito</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <button id="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <input type="text" id="product-name" placeholder="Nombre" required>
+                    <textarea id="product-description" placeholder="Descripción" required></textarea>
+                    <input type="number" id="product-price" placeholder="Precio" step="0.01" required>
+                    <input type="text" id="product-image" placeholder="URL de la imagen">
+                    <input type="number" id="product-stock" placeholder="Stock" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="envios.html">Envíos</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="favoritos.html">Favoritos</a>
+    </nav>
+
+    <section class="info-nosotros">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos <strong>Periféricos Tech</strong>, una empresa dedicada a ofrecer los mejores periféricos de computadora para gamers, profesionales y amantes de la tecnología. Nos especializamos en productos de alta calidad y brindamos el mejor servicio al cliente.</p>
+    </section>
+
+    <section class="mision-vision">
+        <div class="mision">
+            <h2>Nuestra Misión</h2>
+            <p>Ofrecer la mejor tecnología en periféricos con un servicio de calidad, asegurando la satisfacción de nuestros clientes.</p>
+        </div>
+        <div class="vision">
+            <h2>Nuestra Visión</h2>
+            <p>Convertirnos en la tienda líder en periféricos en Latinoamérica, brindando innovación y confianza a nuestros usuarios.</p>
+        </div>
+    </section>
+
+    <section class="formulario-contacto">
+        <h2>Contáctanos</h2>
+        <p>Si tienes preguntas o necesitas asesoramiento, envíanos un mensaje.</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar Mensaje">
+        </form>
+    </section>
+
+    <section class="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Nuestra tienda física se encuentra en:</p>
+        <p><strong>Avenida Tecnológica #123, CDMX, México</strong></p>
+        <div id="map"></div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Periféricos Tech. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/scp.js"></script>
+</body>
+</html>

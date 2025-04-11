@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Periféricos Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Nuestra Tienda</h1>
+        <p>Explora nuestra selección de periféricos de alta calidad</p>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tu Carrito</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <button id="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Producto</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <input type="text" id="product-name" placeholder="Nombre" required>
+                    <textarea id="product-description" placeholder="Descripción" required></textarea>
+                    <input type="number" id="product-price" placeholder="Precio" step="0.01" required>
+                    <input type="text" id="product-image" placeholder="URL de la imagen">
+                    <input type="number" id="product-stock" placeholder="Stock" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="envios.html">Envíos</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="favoritos.html">Favoritos</a>
+    </nav>
+
+    <section class="filtros">
+        <h2>Filtrar por:</h2>
+        <select id="categoria">
+            <option value="todos">Todos</option>
+            <option value="teclados">Teclados</option>
+            <option value="ratones">Ratones</option>
+            <option value="auriculares">Auriculares</option>
+        </select>
+    </section>
+
+    <section class="productos">
+        <div class="producto" data-categoria="teclados">
+            <img src="Img/teclado.jpg" alt="Teclado Mecánico RGB">
+            <h3>Teclado Mecánico RGB</h3>
+            <p>Precio: $1,200 MXN</p>
+            <button onclick="agregarCarrito('Teclado Mecánico RGB', 1200)">Añadir al carrito</button>
+        </div>
+        <div class="producto" data-categoria="ratones">
+            <img src="Img/mouse.jpg" alt="Mouse Gamer 16000 DPI">
+            <h3>Mouse Gamer 16000 DPI</h3>
+            <p>Precio: $800 MXN</p>
+            <button onclick="agregarCarrito('Mouse Gamer 16000 DPI', 800)">Añadir al carrito</button>
+        </div>
+        <div class="producto" data-categoria="auriculares">
+            <img src="Img/auriculares.jpg" alt="Auriculares Gaming 7.1">
+            <h3>Auriculares Gaming 7.1</h3>
+            <p>Precio: $1,500 MXN</p>
+            <button onclick="agregarCarrito('Auriculares Gaming 7.1', 1500)">Añadir al carrito</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Periféricos Tech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function agregarCarrito(nombre, precio) {
+            alert(nombre + " ha sido agregado al carrito.");
+        }
+
+        document.getElementById("categoria").addEventListener("change", function() {
+            let categoriaSeleccionada = this.value;
+            let productos = document.querySelectorAll(".producto");
+
+            productos.forEach(producto => {
+                if (categoriaSeleccionada === "todos" || producto.dataset.categoria === categoriaSeleccionada) {
+                    producto.style.display = "block";
+                } else {
+                    producto.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <script src="js/scp.js"></script>
+</body>
+</html>
